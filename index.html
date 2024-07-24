@@ -31,7 +31,7 @@
             text-decoration: none; /* Remove underline from menu items */
         }
         .company-item img {
-            height: 100px;
+            height: 100px;;
         }
         .header-menu a:hover {
             color: #d4d4d4;
@@ -78,28 +78,23 @@
             display: inline-block;
             margin-left: 5px;
         }
-        .container {
-            padding-left: 16px;
-            padding-right: 16px;
-        }
     </style>
 </head>
 
-<body class="antialiased max-w-2xl mb-40 flex flex-col mx-4 mt-8 lg:mx-auto text-white">
+<body class="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto text-white">
     <!-- Main Container -->
-    <main class="flex-auto min-w-0 mt-6 flex flex-col container">
+    <main class="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
         <!-- Navigation Menu -->
         <nav class="mb-10">
-            <ul class="flex space-x-8 header-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#opensource">Opensource</a></li>
-                <li><a href="#launches">Launches</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#connect">Connect</a></li>
-            </ul>
-        </nav>
-
+         <ul class="flex flex-wrap justify-center sm:justify-start -mx-2 header-menu">
+             <li class="px-2 py-1"><a href="#home">Home</a></li>
+             <li class="px-2 py-1"><a href="#work">Work</a></li>
+             <li class="px-2 py-1"><a href="#opensource">Opensource</a></li>
+             <li class="px-2 py-1"><a href="#launches">Launches</a></li>
+             <li class="px-2 py-1"><a href="#blog">Blog</a></li>
+             <li class="px-2 py-1"><a href="#connect">Connect</a></li>
+         </ul>
+     </nav>
         <!-- Message -->
         <div class="mb-8">
             <p id="greeting" class="text-xl text-left">🙏 Namaskar, I'm Manthan Surkar</p>
@@ -148,11 +143,12 @@
 
         <!-- Opensource Section -->
         <div id="opensource" class="section text-left text-sm">
-            <div class="section-title">Opensource</div>
-            <p class="content">Check out my GitHub: <a href="https://github.com/thesmallstar">thesmallstar</a></p>
-            <p class="content">I love open-source ❤️ and maintain the <a href="https://fineract.apache.org">Fineract project for Apache</a> (GSoC 2020, Mentor 2021/2022)!</p>
-            <p class="content">Other notable contributions include <a href="https://github.com/openemr/openemr">OpenEMR</a>, where I am a member. Additionally, I have a few (very old) contributions to <a href="https://www.phpmyadmin.net/">PHPMyAdmin</a>.</p>
-        </div>
+         <div class="section-title">Opensource</div>
+         <p class="content">Check out my GitHub: <a href="https://github.com/thesmallstar">thesmallstar</a></p>
+         <p class="content">I love open-source ❤️ and maintain the <a href="https://fineract.apache.org">Fineract project for Apache</a> (GSoC 2020, Mentor 2021/2022)!</p>
+         <p class="content">Other notable contributions include <a href="https://github.com/openemr/openemr">OpenEMR</a>, where I am a member. Additionally, I have a few (very old) contributions to <a href="https://www.phpmyadmin.net/">PHPMyAdmin</a>.</p>
+         <p class="content">This website is also open source! You can find the code and use it for your own website at <a href="https://github.com/thesmallstar/surkar.in">github.com/thesmallstar/surkar.in</a>.</p>
+     </div>
 
         <!-- Launches Section -->
         <div id="launches" class="section text-left text-sm">
@@ -168,40 +164,44 @@
             <p class="content">I used to blog at <a href="https://truetricks.com">truetricks.com</a> (2013 school days). I am moving to a new blog at <a href="https://surkar.hashnode.dev">surkar.hashnode.dev</a> and archiving the old one as a memory :D</p>
         </div>
 
-        <!-- Connect Section -->
-        <div id="connect" class="section text-left text-sm">
-            <div class="section-title">Let's Connect!</div>
-            <p class="content">
-                <a href="https://x.com/manthan_surkar" target="_blank" style="display: flex; align-items: center;">
-                    <img src="assets/icons/x.webp" alt="Twitter" style="width: 24px; height: 24px; margin-right: 8px;">
-                    Twitter
-                </a>
-            </p>
-            <p class="content">
-                <a href="https://www.linkedin.com/in/manthansurkar" target="_blank" style="display: flex; align-items: center;">
-                    <img src="assets/icons/linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; margin-right: 8px;">
-                    LinkedIn
-                </a>
-            </p>
-            <p class="content">
-                <a href="https://calendly.com/surkar/30min" target="_blank" style="display: flex; align-items: center;">
-                    <img src="assets/icons/calendly.png" alt="Calendly" style="width: 24px; height: 24px; margin-right: 8px;">
-                    Calendly
-                </a>
-            </p>
-            <p class="content">
-                <a href="mailto:manthan.surkar@gmail.com" style="display: flex; align-items: center;">
-                    <img src="assets/icons/email.webp" alt="Email" style="width: 24px; height: 24px; margin-right: 8px;">
-                    Email
-                </a>
-            </p>
-        </div>
+     <!-- Connect Section -->
+<!-- Connect Section -->
+<div id="connect" class="section text-left text-sm">
+   <div class="section-title">Let's Connect!</div>
+   <p class="content">
+       <a href="https://x.com/manthan_surkar" target="_blank" style="display: flex; align-items: center;">
+           <img src="assets/icons/x.webp" alt="Twitter" style="width: 24px; height: 24px; margin-right: 8px;">
+           Twitter
+       </a>
+   </p>
+   <p class="content">
+       <a href="https://www.linkedin.com/in/manthansurkar" target="_blank" style="display: flex; align-items: center;">
+           <img src="assets/icons/linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; margin-right: 8px;">
+           LinkedIn
+       </a>
+   </p>
+   <p class="content">
+       <a href="https://calendly.com/surkar/30min" target="_blank" style="display: flex; align-items: center;">
+           <img src="assets/icons/calendly.jpeg" alt="Calendly" style="width: 24px; height: 24px; margin-right: 8px;">
+           Calendly
+       </a>
+   </p>
+   <p class="content">
+       <a href="mailto:manthan.surkar@gmail.com" style="display: flex; align-items: center;">
+           <img src="assets/icons/email.webp" alt="Email" style="width: 24px; height: 24px; margin-right: 8px;">
+           Email
+       </a>
+   </p>
+</div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            Made in Bharat 🇮🇳
-        </footer>
+<!-- Footer -->
+<footer class="footer">
+   Made in Bharat 🇮🇳
+</footer>
+
     </main>
+
+  
 
     <script>
         let isEnglish = true;
