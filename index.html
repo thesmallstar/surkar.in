@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Manthan Surkar</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/font.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <style>
         body {
             font-family: 'Geist Sans', sans-serif;
@@ -61,6 +65,16 @@
             align-items: center;
             margin-bottom: 16px;
         }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #d4d4d4;
+        }
+        .footer span {
+            display: inline-block;
+            margin-left: 5px;
+        }
     </style>
 </head>
 
@@ -74,7 +88,8 @@
                 <li><a href="#work">Work</a></li>
                 <li><a href="#opensource">Opensource</a></li>
                 <li><a href="#launches">Launches</a></li>
-                <li><a href="https://myblog.com">Blog</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#connect">Connect</a></li>
             </ul>
         </nav>
 
@@ -90,72 +105,113 @@
 
         <!-- About Section -->
         <div id="home" class="section text-left text-sm">
-            <p class="content">I am a full-stack developer from Maharashtra, India. I have a passion for space science and yoga, and I'm interested in startups (maybe even starting one of my own eventually).</p>
-            <p class="content">On the tech side, I'm a full-stack developer working at Seezo.io. I've worked with Web3 and am currently working with AI. A cool fact about me is that I have a 7+ hackathon winning streak right now ;).</p>
+            <p class="content">I am a full-stack developer from Maharashtra, India. I have a passion for space science and yoga, and I'm interested in early-stage startups (or creating them).</p>
+            <p class="content">I graduated from IIIT-Allahabad in 2022 with a B.Tech in Information Technology. I received a 🥇 gold medal for my final year performance and a 🥈 silver medal for overall performance.</p>
+            <p class="content">On the technical side, I'm a full-stack developer working at Seezo.io. I am passionate about backend engineering. I've worked with Web3 (as a freelancer) and am currently working with AI (mainly GenAI). A trivia about me is that I have a 7+ hackathon winning streak right now ;).</p>
         </div>
 
         <!-- Work Section -->
         <div id="work" class="section text-left text-sm">
-         <div class="section-title">Work</div>
-     
-         <div class="company-item">
-             <img src="assets/images/seezo.avif" alt="Seezo.io" class="company-logo seezo" />
-             <div>
-                 <strong>Lead Founding Engineer</strong>
-                 <p>Leads Infra, does backend engineering, and AI research at Seezo.io.</p>
-             </div>
-         </div>
-     
-         <div class="company-item">
-             <img src="assets/images/bx.svg" alt="BharatX" class="company-logo" />
-             <div>
-                 <strong>Tech Lead</strong>
-                 <p>Worked closely with an amazing engineering team. In the brief time I was there, I reduced risk costs by more than 75%, increased observability on the backend by adding Prometheus metrics and setting up Grafana across 5+ services, and templated the messaging stack for WhatsApp/SMS. Moved on to work in a more early-stage startup.</p>
-             </div>
-         </div>
-     
-         <div class="company-item">
-             <img src="assets/images/rzp.svg" alt="Razorpay" class="company-logo" />
-             <div>
-                 <strong>Senior Software Development Engineer</strong>
-                 <p>Worked on Next-gen Auto-KYC, 10k+ RPS Account Service, and Modular Onboarding Service at Razorpay.</p>
-             </div>
-         </div>
-     </div>
+            <div class="section-title">Work</div>
+
+            <div class="company-item">
+                <img src="assets/images/seezo.avif" alt="Seezo.io" class="company-logo seezo" />
+                <div>
+                    <strong>Lead Founding Engineer @ Seezo.io</strong>
+                    <p>Leads Infra, does backend engineering, and AI research at Seezo.io.</p>
+                </div>
+            </div>
+
+            <div class="company-item">
+                <img src="assets/images/bx.svg" alt="BharatX" class="company-logo" />
+                <div>
+                    <strong>Tech Lead @ BharatX</strong>
+                    <p>Worked closely with an amazing engineering team. In the brief time I was there, I reduced risk costs by more than 75%, increased observability on the backend by adding Prometheus metrics and setting up Grafana across 5+ services, and templated the messaging stack for WhatsApp/SMS. Moved on to work in a more early-stage startup.</p>
+                </div>
+            </div>
+
+            <div class="company-item">
+                <img src="assets/images/rzp.svg" alt="Razorpay" class="company-logo" />
+                <div>
+                    <strong>Senior Software Development Engineer @ Razorpay</strong>
+                    <p>With an amazing team, increased Auto KYC coverage for Razorpay from 10% to more than 75%. This included using and training ML models for Auto KYC. Later, I worked on the Account Service, which is one of the central services. This involved decomposing a central entity from the monolith and ensuring a smooth transition to this new service, which was designed to handle more than 10k RPS.</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Opensource Section -->
         <div id="opensource" class="section text-left text-sm">
             <div class="section-title">Opensource</div>
-            <p class="content">I love open-source ❤️ and maintain the <a href="https://fineract.apache.org">Fineract project for Apache</a>! Check out my GitHub: <a href="https://github.com/thesmallstar">thesmallstar</a></p>
+            <p class="content">Check out my GitHub: <a href="https://github.com/thesmallstar">thesmallstar</a></p>
+            <p class="content">I love open-source ❤️ and maintain the <a href="https://fineract.apache.org">Fineract project for Apache</a> (GSoC 2020, Mentor 2021/2022)!</p>
+            <p class="content">Other notable contributions include <a href="https://github.com/openemr/openemr">OpenEMR</a>, where I am a member. Additionally, I have a few (very old) contributions to <a href="https://www.phpmyadmin.net/">PHPMyAdmin</a>.</p>
         </div>
 
         <!-- Launches Section -->
         <div id="launches" class="section text-left text-sm">
             <div class="section-title">Launches</div>
-            <p class="content">Details about any products or projects you've launched.</p>
+            <p class="content">Few of my latest launches are <a href="https://www.producthunt.com/products/prana-your-time-is-limited#prana-your-time-is-limited">Prana</a> and <a href="https://www.producthunt.com/products/abha-page#abha-page">Abha.page</a>.</p>
+            <p class="content">Previously, I have also started three startups: Hosetic, Amusebag, and Hostbins. I was able to sell one of them for a little (very little) money!</p>
         </div>
 
         <!-- Blog Section -->
-        <div class="section text-left text-sm">
+        <div id="blog" class="section text-left text-sm">
             <div class="section-title">Blog</div>
-            <p class="content">Visit my blog at <a href="https://myblog.com">my blog</a> to read about various topics I'm interested in.</p>
+            <p class="content">Visit my blog at <a href="https://surkar.hashnode.dev">my blog</a> where I am mainly writing about AI/LLMs.</p>
+            <p class="content">I used to blog at <a href="https://truetricks.com">truetricks.com</a> (2013 school days). I am moving to a new blog at <a href="https://surkar.hashnode.dev">surkar.hashnode.dev</a> and archiving the old one as a memory :D</p>
         </div>
+
+     <!-- Connect Section -->
+<!-- Connect Section -->
+<div id="connect" class="section text-left text-sm">
+   <div class="section-title">Let's Connect!</div>
+   <p class="content">
+       <a href="https://x.com/manthan_surkar" target="_blank" style="display: flex; align-items: center;">
+           <img src="assets/icons/x.webp" alt="Twitter" style="width: 24px; height: 24px; margin-right: 8px;">
+           Twitter
+       </a>
+   </p>
+   <p class="content">
+       <a href="https://www.linkedin.com/in/manthansurkar" target="_blank" style="display: flex; align-items: center;">
+           <img src="assets/icons/linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; margin-right: 8px;">
+           LinkedIn
+       </a>
+   </p>
+   <p class="content">
+       <a href="https://calendly.com/surkar/30min" target="_blank" style="display: flex; align-items: center;">
+           <img src="assets/icons/calendly.jpeg" alt="Calendly" style="width: 24px; height: 24px; margin-right: 8px;">
+           Calendly
+       </a>
+   </p>
+   <p class="content">
+       <a href="mailto:manthan.surkar@gmail.com" style="display: flex; align-items: center;">
+           <img src="assets/icons/email.webp" alt="Email" style="width: 24px; height: 24px; margin-right: 8px;">
+           Email
+       </a>
+   </p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+   Made in Bharat 🇮🇳
+</footer>
+
     </main>
 
-    <script>
-      
-            let isEnglish = true;
-            const greetingElement = document.getElementById('greeting');
+  
 
-            setInterval(() => {
-                if (isEnglish) {
-                    greetingElement.innerHTML = '🙏 Namaskar, I\'m Manthan Surkar';
-                } else {
-                    greetingElement.innerHTML = '🙏 नमस्कार, मी मंथन सूरकर';
-                }
-                isEnglish = !isEnglish;
-            }, 2000); // Change every 3 seconds
- 
+    <script>
+        let isEnglish = true;
+        const greetingElement = document.getElementById('greeting');
+
+        setInterval(() => {
+            if (isEnglish) {
+                greetingElement.innerHTML = '🙏 Namaskar, I\'m Manthan Surkar';
+            } else {
+                greetingElement.innerHTML = '🙏 नमस्कार, मी मंथन सूरकर';
+            }
+            isEnglish = !isEnglish;
+        }, 2000); // Change every 2 seconds
     </script>
 </body>
 
