@@ -15,78 +15,106 @@
         body {
             font-family: 'Geist Sans', sans-serif;
             color: #d4d4d4;
-            font-size: 16px; /* Default font size for body text */
+            font-size: 16px;
             background-color: #111010;
         }
+
         a {
             color: white;
-            text-decoration: underline; /* Underline links */
+            text-decoration: underline;
         }
+
         a:hover {
             color: #d4d4d4;
         }
+
         .header-menu a {
             color: white;
-            font-size: 16px; /* Font size for menu items */
-            text-decoration: none; /* Remove underline from menu items */
+            font-size: 16px;
+            text-decoration: none;
         }
+
         .company-item img {
-            height: 100px;;
+            height: 100px;
         }
+
         .header-menu a:hover {
             color: #d4d4d4;
         }
+
         .text-sm {
-            font-size: 16px; /* Font size for other text */
+            font-size: 16px;
         }
+
         .section {
-            margin-bottom: 40px; /* Spacing between sections */
-            color: #d4d4d4; /* Font color for sections */
+            margin-bottom: 40px;
+            color: #d4d4d4;
         }
+
         .section-title {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 16px;
-            color: #d4d4d4; /* Title color */
+            color: #d4d4d4;
         }
+
         .content {
             margin-bottom: 16px;
         }
+
         .company-logo {
-            max-width: 100px; /* Limit the size of the logos */
+            max-width: 100px;
             margin-right: 16px;
             vertical-align: middle;
-            background-color: #fff; /* White background for logos */
-            padding: 8px; /* Padding around the logo */
-            border-radius: 8px; /* Rounded corners */
+            background-color: #fff;
+            padding: 8px;
+            border-radius: 8px;
         }
+
         .company-logo.seezo {
-            background-color: #000; /* Black background for Seezo.io logo */
+            background-color: #000;
         }
+
         .company-item {
             display: flex;
             align-items: center;
             margin-bottom: 16px;
         }
+
         .footer {
             text-align: center;
             margin-top: 40px;
             font-size: 14px;
             color: #d4d4d4;
         }
+
         .footer span {
             display: inline-block;
             margin-left: 5px;
         }
+
+        .flex-img {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .flex-img img {
+            flex: 1 1 0;
+            object-fit: cover;
+        }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL3FHN58R6"></script>
-      <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'G-HL3FHN58R6');
-      </script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HL3FHN58R6');
+    </script>
 </head>
 
 <body class="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto text-white">
@@ -94,23 +122,31 @@
     <main class="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
         <!-- Navigation Menu -->
         <nav class="mb-10">
-         <ul class="flex flex-wrap justify-center sm:justify-start -mx-2 header-menu">
-             <li class="px-2 py-1"><a href="#home">Home</a></li>
-             <li class="px-2 py-1"><a href="#work">Work</a></li>
-             <li class="px-2 py-1"><a href="#opensource">Opensource</a></li>
-             <li class="px-2 py-1"><a href="#launches">Launches</a></li>
-             <li class="px-2 py-1"><a href="#blog">Blog</a></li>
-             <li class="px-2 py-1"><a href="#connect">Connect</a></li>
-         </ul>
-     </nav>
+            <ul class="flex flex-wrap justify-center sm:justify-start -mx-2 header-menu">
+                <li class="px-2 py-1"><a href="#home">Home</a></li>
+                <li class="px-2 py-1"><a href="#work">Work</a></li>
+                <li class="px-2 py-1"><a href="#opensource">Opensource</a></li>
+                <li class="px-2 py-1"><a href="#launches">Launches</a></li>
+                <li class="px-2 py-1"><a href="#blog">Blog</a></li>
+                <li class="px-2 py-1"><a href="#connect">Connect</a></li>
+            </ul>
+        </nav>
         <!-- Message -->
         <div class="mb-8">
             <p id="greeting" class="text-xl text-left">🙏 Namaskar, I'm Manthan Surkar</p>
         </div>
 
-        <!-- Image -->
-        <div class="flex justify-center mb-8">
-            <img src="https://framerusercontent.com/images/ueCdW89sGDIRjsKN88H5k8NrM.png" alt="Manthan Surkar" class="w-48 h-48 rounded-full object-cover" />
+        <!-- Images -->
+        <div class="flex-img">
+            <div>
+            <img src='/assets/me/1.jpeg' alt="Manthan Surkar" />
+        </div>
+        <div>
+            <img src='/assets/me/3.avif' alt="Manthan Surkar" />
+            </div>
+            <div>
+            <img src='/assets/me/2.jpeg' alt="Manthan Surkar" />
+        </div>
         </div>
 
         <!-- About Section -->
@@ -151,12 +187,12 @@
 
         <!-- Opensource Section -->
         <div id="opensource" class="section text-left text-sm">
-         <div class="section-title">Opensource</div>
-         <p class="content">Check out my GitHub: <a href="https://github.com/thesmallstar">thesmallstar</a></p>
-         <p class="content">I love open-source ❤️ and maintain the <a href="https://fineract.apache.org">Fineract project for Apache</a> (GSoC 2020, Mentor 2021/2022)!</p>
-         <p class="content">Other notable contributions include <a href="https://github.com/openemr/openemr">OpenEMR</a>, where I am a member. Additionally, I have a few (very old) contributions to <a href="https://www.phpmyadmin.net/">PHPMyAdmin</a>.</p>
-         <p class="content">This website is also open source(made using gpt4o)! You can find the code and use it for your own website at <a href="https://github.com/thesmallstar/surkar.in">github.com/thesmallstar/surkar.in</a>.</p>
-     </div>
+            <div class="section-title">Opensource</div>
+            <p class="content">Check out my GitHub: <a href="https://github.com/thesmallstar">thesmallstar</a></p>
+            <p class="content">I love open-source ❤️ and maintain the <a href="https://fineract.apache.org">Fineract project for Apache</a> (GSoC 2020, Mentor 2021/2022)!</p>
+            <p class="content">Other notable contributions include <a href="https://github.com/openemr/openemr">OpenEMR</a>, where I am a member. Additionally, I have a few (very old) contributions to <a href="https://www.phpmyadmin.net/">PHPMyAdmin</a>.</p>
+            <p class="content">This website is also open source (made using GPT-4)! You can find the code and use it for your own website at <a href="https://github.com/thesmallstar/surkar.in">github.com/thesmallstar/surkar.in</a>.</p>
+        </div>
 
         <!-- Launches Section -->
         <div id="launches" class="section text-left text-sm">
@@ -172,40 +208,39 @@
             <p class="content">I used to blog at <a href="https://truetricks.com">truetricks.com</a> (2013 school days). I am moving to a new blog at <a href="https://surkar.hashnode.dev">surkar.hashnode.dev</a> and archiving the old one as a memory :D</p>
         </div>
 
-     <!-- Connect Section -->
-<!-- Connect Section -->
-<div id="connect" class="section text-left text-sm">
-   <div class="section-title">Let's Connect!</div>
-   <p class="content">
-       <a href="https://x.com/manthan_surkar" target="_blank" style="display: flex; align-items: center;">
-           <img src="assets/icons/x.webp" alt="Twitter" style="width: 24px; height: 24px; margin-right: 8px;">
-           Twitter
-       </a>
-   </p>
-   <p class="content">
-       <a href="https://www.linkedin.com/in/manthansurkar" target="_blank" style="display: flex; align-items: center;">
-           <img src="assets/icons/linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; margin-right: 8px;">
-           LinkedIn
-       </a>
-   </p>
-   <p class="content">
-       <a href="https://calendly.com/surkar/30min" target="_blank" style="display: flex; align-items: center;">
-           <img src="assets/icons/calendly.jpeg" alt="Calendly" style="width: 24px; height: 24px; margin-right: 8px;">
-           Calendly
-       </a>
-   </p>
-   <p class="content">
-       <a href="mailto:manthan.surkar@gmail.com" style="display: flex; align-items: center;">
-           <img src="assets/icons/email.webp" alt="Email" style="width: 24px; height: 24px; margin-right: 8px;">
-           Email
-       </a>
-   </p>
-</div>
+        <!-- Connect Section -->
+        <div id="connect" class="section text-left text-sm">
+            <div class="section-title">Let's Connect!</div>
+            <p class="content">
+                <a href="https://x.com/manthan_surkar" target="_blank" style="display: flex; align-items: center;">
+                    <img src="assets/icons/x.webp" alt="Twitter" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Twitter
+                </a>
+            </p>
+            <p class="content">
+                <a href="https://www.linkedin.com/in/manthansurkar" target="_blank" style="display: flex; align-items: center;">
+                    <img src="assets/icons/linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; margin-right: 8px;">
+                    LinkedIn
+                </a>
+            </p>
+            <p class="content">
+                <a href="https://calendly.com/surkar/30min" target="_blank" style="display: flex; align-items: center;">
+                    <img src="assets/icons/calendly.jpeg" alt="Calendly" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Calendly
+                </a>
+            </p>
+            <p class="content">
+                <a href="mailto:manthan.surkar@gmail.com" style="display: flex; align-items: center;">
+                    <img src="assets/icons/email.webp" alt="Email" style="width: 24px; height: 24px; margin-right: 8px;">
+                    Email
+                </a>
+            </p>
+        </div>
 
-<!-- Footer -->
-<footer class="footer">
-   Made in Bharat 🇮🇳
-</footer>
+        <!-- Footer -->
+        <footer class="footer">
+            Made in Bharat 🇮🇳
+        </footer>
 
     </main>
     <script>
@@ -220,6 +255,16 @@
             }
             isEnglish = !isEnglish;
         }, 2000); // Change every 2 seconds
+    </script>
+
+    <script>
+        window.addEventListener('load', () => {
+            const images = document.querySelectorAll('.flex-img img');
+            let minHeight = Math.min(...Array.from(images).map(img => img.height));
+            images.forEach(img => {
+                img.style.maxHeight = `${minHeight}px`;
+            });
+        });
     </script>
 </body>
 
