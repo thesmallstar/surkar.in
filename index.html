@@ -12,26 +12,39 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Geist Sans', sans-serif;
             color: #d4d4d4;
             font-size: 16px;
+            line-height: 1.7;
             background-color: #111010;
+            background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), transparent);
         }
 
         a {
             color: white;
             text-decoration: underline;
+            text-decoration-color: #555;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease, text-decoration-color 0.2s ease;
         }
 
         a:hover {
-            color: #d4d4d4;
+            color: #a5b4fc;
+            text-decoration-color: #a5b4fc;
         }
 
         .header-menu a {
             color: white;
             font-size: 16px;
             text-decoration: none;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
         .company-item img {
@@ -39,7 +52,8 @@
         }
 
         .header-menu a:hover {
-            color: #d4d4d4;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.08);
         }
 
         .text-sm {
@@ -47,7 +61,7 @@
         }
 
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 48px;
             color: #d4d4d4;
         }
 
@@ -55,7 +69,18 @@
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 16px;
-            color: #d4d4d4;
+            color: #fff;
+            letter-spacing: -0.01em;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 2px;
+            margin-top: 6px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #a5b4fc, transparent);
         }
 
         .content {
@@ -68,7 +93,8 @@
             vertical-align: middle;
             background-color: #fff;
             padding: 8px;
-            border-radius: 8px;
+            border-radius: 10px;
+            flex-shrink: 0;
         }
 
         .company-logo.seezo {
@@ -79,18 +105,16 @@
             display: flex;
             align-items: center;
             margin-bottom: 16px;
+            padding: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.02);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
         }
 
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #d4d4d4;
-        }
-
-        .footer span {
-            display: inline-block;
-            margin-left: 5px;
+        .company-item:hover {
+            border-color: rgba(255, 255, 255, 0.18);
+            background-color: rgba(255, 255, 255, 0.04);
         }
 
         .flex-img {
@@ -99,9 +123,19 @@
             gap: 1rem;
             margin-bottom: 2rem;
         }
-        .flex-img img {
+        .flex-img div {
             flex: 1 1 0;
+            min-width: 0;
+        }
+        .flex-img img {
+            width: 100%;
+            height: 190px;
             object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.25s ease;
+        }
+        .flex-img img:hover {
+            transform: scale(1.02);
         }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL3FHN58R6"></script>
@@ -147,11 +181,14 @@
             <div>
             <img src='/assets/me/2.jpeg' alt="Manthan Surkar" />
         </div>
+            <div>
+            <img src='/assets/me/4.jpeg' alt="Manthan Surkar" />
+        </div>
         </div>
 
         <!-- About Section -->
         <div id="home" class="section text-left text-sm">
-            <p class="content">I am a Lead Engineer (Backend, Applied AI & Infra) from Maharashtra, India. I have a passion for space science and yoga, and I'm interested in early-stage startups (or creating them).</p>
+            <p class="content">I am a Principal Engineer (Backend, Applied AI & Infra) from Maharashtra, India. I have a passion for space science and yoga, and I'm interested in early-stage startups (or creating them).</p>
             <p class="content">I graduated from IIIT-Allahabad in 2022 with a B.Tech in Information Technology. I received a 🥇 gold medal for my final year performance and a 🥈 silver medal for overall performance.</p>
             <p class="content">On the technical side, I specialize in backend engineering, AI pipelines, and infrastructure. I'm currently at Seezo.io where I lead AI research, backend, and infra from scratch. I've won 10+ hackathons including ETHIndia and Smart India Hackathon.</p>
         </div>
@@ -163,7 +200,7 @@
             <div class="company-item">
                 <img src="assets/images/seezo.avif" alt="Seezo.io" class="company-logo seezo" />
                 <div>
-                    <strong>Lead & Founding Engineer @ Seezo.io</strong>
+                    <strong>Principal & Founding Engineer @ Seezo.io</strong>
                     <p>Lead AI research, backend, and infrastructure from scratch ensuring reliability and quality. Built and optimized AI pipelines including AI agents, RAG, evals, and advanced search using Agno and LangChain. Built enterprise-grade RBAC from scratch and managed authentication across all major IDPs. Managed infra across AWS and Azure with Terraform, supporting both on-prem and SaaS setups. Scaled the engineering team from 1 to 7+.</p>
                 </div>
             </div>
@@ -190,7 +227,7 @@
             <div class="section-title">Opensource</div>
             <p class="content">Check out my GitHub: <a href="https://github.com/thesmallstar">thesmallstar</a></p>
             <p class="content">I love open-source ❤️ and am a contributor and committer for <a href="https://fineract.apache.org">Apache Fineract</a> via GSoC 2020, with 100+ PRs merged. I also mentored for the project in 2021 and 2022.</p>
-            <p class="content">I maintain <a href="https://github.com/thesmallstar/slackify-markdown-python">Slackify Markdown</a>, a Python package with <strong>2.5M+ downloads</strong>. Other contributions include <a href="https://github.com/langchain-ai/langchain">LangChain</a>, <a href="https://github.com/openemr/openemr">OpenEMR</a>, and <a href="https://www.phpmyadmin.net/">phpMyAdmin</a>.</p>
+            <p class="content">I maintain <a href="https://github.com/thesmallstar/slackify-markdown-python">Slackify Markdown</a>, a Python package with <strong>7M+ downloads</strong>. Other contributions include <a href="https://github.com/langchain-ai/langchain">LangChain</a>, <a href="https://github.com/openemr/openemr">OpenEMR</a>, and <a href="https://www.phpmyadmin.net/">phpMyAdmin</a>.</p>
             <p class="content">This website is also open source! You can find the code at <a href="https://github.com/thesmallstar/surkar.in">github.com/thesmallstar/surkar.in</a>.</p>
         </div>
 
@@ -198,6 +235,7 @@
         <div id="launches" class="section text-left text-sm">
             <div class="section-title">Launches</div>
             <ul style="list-style: disc; padding-left: 1.2rem; line-height: 2;">
+                <li><a href="https://recallfox.com"><strong>RecallFox.com</strong></a> — currently in development 🚧 — being built right now, stay tuned!</li>
                 <li><a href="http://bhava.app"><strong>Bhava.app</strong></a> — AI diagramming tool; <strong>5th Product of the Day</strong> on <a href="https://www.producthunt.com/products/bhava/launches/bhava">Product Hunt</a>. 2500+ users, 30+ paying customers.</li>
                 <li><a href="http://patra.app"><strong>Patra.app</strong></a> — AI tool to manage Jira from Slack; <strong>17th Product of the Day</strong> on <a href="https://www.producthunt.com/products/patra/launches/patra">Product Hunt</a>.</li>
                 <li><a href="http://abha.page"><strong>Abha.page</strong></a> — Color palette generator with live demo; <strong>18th Product of the Day</strong> on <a href="https://www.producthunt.com/products/abha-page/launches/abha-page">Product Hunt</a>.</li>
@@ -242,11 +280,6 @@
             </p>
         </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            Made in Bharat 🇮🇳
-        </footer>
-
     </main>
     <script>
         let isEnglish = true;
@@ -262,15 +295,6 @@
         }, 2000); // Change every 2 seconds
     </script>
 
-    <script>
-        window.addEventListener('load', () => {
-            const images = document.querySelectorAll('.flex-img img');
-            let minHeight = Math.min(...Array.from(images).map(img => img.height));
-            images.forEach(img => {
-                img.style.maxHeight = `${minHeight}px`;
-            });
-        });
-    </script>
 </body>
 
 </html>
